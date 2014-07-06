@@ -11,8 +11,6 @@ public class Main extends JFrame{
     JButton btnThread2 = new JButton("Thread 2");
     static JProgressBar pb1 = new JProgressBar(0,1000);
     static JProgressBar pb2 = new JProgressBar(0,1000);
-    SpringLayout springLayout = new SpringLayout();
-    FlowLayout flowLayout = new FlowLayout();
     GridLayout gridLayout = new GridLayout(4,1);
 
     public Main() throws HeadlessException {
@@ -37,6 +35,10 @@ public class Main extends JFrame{
 
             }
         });
+        InicializaComponentes(container);
+    }
+
+    private void InicializaComponentes(Container container) {
         container.add(btnThread1);
         pb1.setSize(100,1000);
         container.add(pb1);
